@@ -1,0 +1,105 @@
+name: 文章投稿请求
+about: 提交新文章或投稿想法
+title: "[投稿] 文章标题"
+labels: ["article", "submission"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您向本博客投稿！请填写以下信息，我们会尽快审核。
+
+  - type: input
+    id: article-title
+    attributes:
+      label: 文章标题
+      description: 请填写文章的标题
+      placeholder: 例如：Vue 3.0 新特性详解
+    validations:
+      required: true
+
+  - type: textarea
+    id: article-summary
+    attributes:
+      label: 文章简介
+      description: 请用 100-200 字简要介绍文章内容
+      placeholder: 这篇文章主要介绍了...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: article-category
+    attributes:
+      label: 文章分类
+      description: 请选择文章所属分类
+      options:
+        - 技术教程
+        - 开发经验
+        - 技术思考
+        - 开源分享
+        - 工具推荐
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: article-tags
+    attributes:
+      label: 文章标签
+      description: 请填写文章标签，用逗号分隔
+      placeholder: 例如：Vue, JavaScript, 前端
+
+  - type: textarea
+    id: article-outline
+    attributes:
+      label: 文章大纲
+      description: 请简要列出文章的主要章节或内容大纲
+      placeholder: |
+        1. 引言
+        2. 背景介绍
+        3. 主要内容
+        4. 实践案例
+        5. 总结
+
+  - type: input
+    id: author-name
+    attributes:
+      label: 作者署名
+      description: 希望显示在文章底部的作者名字
+      placeholder: 您的名字或昵称
+    validations:
+      required: true
+
+  - type: input
+    id: author-contact
+    attributes:
+      label: 联系方式（可选）
+      description: 邮箱或社交账号，方便我们联系您
+      placeholder: 例如：example@email.com 或 @username
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 投稿确认
+      description: 请确认以下事项
+      options:
+        - label: 文章为原创内容，或已获得原作者授权
+          required: true
+        - label: 文章内容符合本博客的投稿规范
+          required: true
+        - label: 文章不含有违反法律法规或社会公德的内容
+          required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 其他信息
+      description: 其他需要说明的事项
+      placeholder: 例如：是否需要特别审核、相关链接等
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **感谢投稿！** 我们会尽快审核您的文章，审核结果将通过评论通知您。如有疑问，请联系维护者。
