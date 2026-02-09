@@ -25,18 +25,14 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install Hexo CLI
+        run: npm install -g hexo-cli
+
       - name: Install Dependencies
         run: npm install
 
-      - name: Setup Theme
-        run: |
-          if [ -d "node_modules/hexo-theme-landscape" ]; then
-            mkdir -p themes/landscape
-            cp -r node_modules/hexo-theme-landscape/* themes/landscape/
-          fi
-
       - name: Build
-        run: npx hexo generate
+        run: hexo generate
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
