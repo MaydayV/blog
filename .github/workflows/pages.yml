@@ -19,22 +19,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
       - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
 
       - name: Setup Theme
         run: |
-          mkdir -p themes/landscape
-          cp -r node_modules/hexo-theme-landscape/* themes/landscape/
+          if [ -d "node_modules/hexo-theme-landscape" ]; then
+            mkdir -p themes/landscape
+            cp -r node_modules/hexo-theme-landscape/* themes/landscape/
+          fi
 
       - name: Build
         run: npx hexo generate
