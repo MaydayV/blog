@@ -1,0 +1,158 @@
+# NexT 主题配置
+# 文档: https://theme-next.js.org/
+
+# 主题方案 (Muse | Mist | Pisces | Gemini)
+scheme: Gemini
+
+# 暗色模式
+darkmode: true
+
+# 菜单设置
+menu:
+  home: / || fa fa-home
+  categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
+  archives: /archives/ || fa fa-archive
+  about: /about/ || fa fa-user
+
+# 侧边栏设置
+sidebar:
+  position: left
+  width: 300
+  display: post
+  padding: 18
+  offset: 12
+
+# 头像
+avatar:
+  url: /images/avatar.png
+  rounded: true
+  rotated: false
+
+# 社交链接
+social:
+  GitHub: https://github.com/MaydayV/blog || fab fa-github
+  Telegram: https://t.me/tuhaov || fab fa-telegram
+
+# 代码块设置
+codeblock:
+  copy_button:
+    enable: true
+    style: mac
+
+# 返回顶部
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: true
+
+# 阅读进度条
+reading_progress:
+  enable: true
+  position: top
+  color: "#00c6fb"
+  height: 3px
+
+# 书签
+bookmark:
+  enable: true
+  color: "#222"
+  save: auto
+
+# GitHub 横幅
+github_banner:
+  enable: true
+  permalink: https://github.com/MaydayV/blog
+  title: Fork me on GitHub
+
+# 本地搜索
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 1
+  unescape: false
+  preload: false
+
+# 字体设置
+font:
+  enable: true
+  host: https://fonts.googleapis.com
+  global:
+    external: true
+    family: "Noto Sans SC"
+    size: 1
+  title:
+    external: true
+    family: "Noto Sans SC"
+    size: 1.5
+  headings:
+    external: true
+    family: "Noto Sans SC"
+    size: 1.5
+  posts:
+    external: true
+    family: "Noto Sans SC"
+  codes:
+    external: true
+    family: "Fira Code"
+
+# 动画效果
+motion:
+  enable: true
+  async: false
+  transition:
+    menu_item: fadeInDown
+    post_block: fadeIn
+    post_header: fadeInDown
+    post_body: fadeInDown
+    coll_header: fadeInLeft
+    sidebar: fadeInUp
+
+# 页脚设置
+footer:
+  since: 2024
+  icon:
+    name: fa fa-heart
+    animated: true
+    color: "#ff6b6b"
+  copyright: AI Notes Community
+  powered: false
+
+# 创意共享
+creative_commons:
+  license: by-nc-sa
+  size: small
+  sidebar: false
+  post: true
+  language: zh-CN
+
+# 相关文章
+related_posts:
+  enable: true
+  display_in_home: false
+
+# 文章元数据
+post_meta:
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
+  categories: true
+
+# 文章字数统计
+symbols_count_time:
+  separated_meta: true
+  item_text_total: true
+
+# 标签图标
+tag_icon: true
+
+# 自定义文件
+custom_file_path:
+  style: source/_data/styles.styl
+
+# SEO
+index_with_subtitle: true
+
+# 主题核心配色 (科技蓝)
+# 在 styles.styl 中自定义
