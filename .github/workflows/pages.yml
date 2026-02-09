@@ -25,14 +25,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Hexo CLI
-        run: npm install -g hexo-cli
-
       - name: Install Dependencies
         run: npm install
 
       - name: Build
-        run: hexo generate
+        run: npx hexo generate
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
